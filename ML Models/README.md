@@ -164,19 +164,21 @@ We can see that top correlated 4 features are:
 
 ![unsure_hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/hesitancy_unsure_importance.png)
 We can see that top correlated 4 features are:
-- Complete Vaccination percentage
-- Gathering bans
-- Average no-leisure-time rate 
-- Average checkup frequency 
-
-### Strong Hesitancy
-
-![strong_hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/strong_hesitancy_importance.png)
 
 - Average mental health rate
 - Complete Vaccination percentage
 - Gathering bans
 - Average no-leisure-time rate percentage
+
+### Strong Hesitancy
+
+![strong_hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/strong_hesitancy_importance.png)
+
+- Complete Vaccination percentage
+- Gathering bans
+- Average no-leisure-time rate 
+- Average checkup frequency 
+
 
 
 
