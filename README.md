@@ -1,7 +1,5 @@
 # Final-Project Topic: COVID 19 Vaccine Hesitancy Levels Analysis
 
-[Link to Google Slides presentation](https://docs.google.com/presentation/d/1QMLQhXdtwhx3Y2UqlmNIYpZkR67QkC8ZYHKdYIHn1MU/edit#slide=id.p)
-
 [Link to Tableau Story](https://public.tableau.com/app/profile/ziwen.lyu/viz/TheEDAofVaccineHesitancySupplyLevelOrdersandHealthConditions/Story1?publish=yes)
 
 ## Analysis Overview:
