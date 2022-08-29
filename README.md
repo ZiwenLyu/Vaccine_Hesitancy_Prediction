@@ -299,6 +299,7 @@ We can see that top correlated 4 features are:
 
 ## Conclusions & Further Research Recommendations 
 The Regression Tree model we built could predict the vaccine hesitant rate on a county level based on community health conditions, orders, SVI, and supply. It had the best overall predictive performance. It could offer suggestions for the government when campaigning and rolling out vaccines.
+
 **Insights**: The government's orders and health guidance sent important messages to the public and help the people raise awareness towards the virus. As we see places with or without gathering bans rated significantly differently on their hesitancy. 
 Also, the analysis highlights the social vulnerability index and health conditions as key points to consider when rolling out vaccine. Vulnerable people with fundmental diseases should be cared the most during the pandemic, but the analysis show they are the most reluctant to vaccination and suffering from high or substantial transmission. The government though priotized seniors and vulnerable ones for vaccination, the analysis suggests more campaigns, guidances, or instructions should be done.  
 
