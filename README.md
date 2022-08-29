@@ -80,7 +80,7 @@ The graph illustrates how community orders (gathering bans, mask mandates, and s
 
 ### The Social vulnerability index (SVI) and transmission level vs Hesitancy
 Usually counties with high vulnerability shoud be most concerned by the government, as virus are more fatal to them. The graph reveals a positive correlation between social vulnerable index and hesitancy, and apparantly very highly vulnerable counties are the most hesitant to take vaccines. Also, we can see that counties are doubtful about vaccines suffer from more severe transimission. The government should focus on highly vulnerable counties.
-![The Social vulnerability index and transmission level vs Hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_orders_vs_hesitancy.png)
+![The Social vulnerability index and transmission level vs Hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_svi_vs_hesitancy.png)
 
 ### The Mental health vs Hesitancy
 The less healthy mental situations suggest the less willingness to take vaccine. The graph highlights the positive relationship in mental health (no leisure time rate, depression rate, and long mental health issues rate) and the vaccine hesitancy rate.  
