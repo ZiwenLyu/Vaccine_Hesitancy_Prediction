@@ -1,4 +1,4 @@
-# Final-Project Topic: COVID 19 Vaccine Hesitancy Levels Analysis
+# Final-Project Topic: COVID 19 Vaccine Hesitancy Analysis
 
 [Link to Tableau Story](https://public.tableau.com/app/profile/ziwen.lyu/viz/TheEDAofVaccineHesitancySupplyLevelOrdersandHealthConditions/Story1?publish=yes)
 
@@ -15,39 +15,12 @@ The purpose of this project is to analyze and predict the level of Vaccine Hesit
 
 - What counties will rank highly hesitant based on the local COVID transimission level?
 
- 
-## Data Sources:
-
-https://data.cdc.gov/Vaccinations/Vaccines-gov-COVID-19-vaccinating-provider-locatio/5jp2-pgaw
-
-https://data.cdc.gov/Vaccinations/Fully-Vaccinated-Adults/jm79-dz78
-
-https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh
-
-https://data.cdc.gov/Policy-Surveillance/U-S-State-and-Territorial-Public-Mask-Mandates-Fro/42jj-z7fa
-
-https://data.cdc.gov/Policy-Surveillance/U-S-State-and-Territorial-Stay-At-Home-Orders-Marc/y2iy-8irm
-
-https://data.cdc.gov/Policy-Surveillance/U-S-State-and-Territorial-Gathering-Bans-March-11-/7xvh-y5vh
-
-https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Census-Tract-Data-GIS-Friendly-Format-2021-/yjkw-uj5s
-
-https://data.cdc.gov/Public-Health-Surveillance/United-States-COVID-19-County-Level-of-Community-T/nra9-vzzn
-
-
-| Software & Libraries |   |
-| --- | --- |
-| Data Retrieval, Cleaning, and Analysis:  | Python, API |
-| Database Management/Storage:  | PostgreSQL |
-| Predictive Analysis:  | Machine Learning |
-| Data Visualization:  | Tableau |
-
 ***
 
 ## Project Developmental Planning:
 ### Project planning can be split into four steps:
 
-- **Database Storage**: PostgreSQL is the database we intend to use to construct the pipline, where we aggregate, transform, and load data to the warehouse.
+- **Data Integration**: PostgreSQL is the database we intend to use to construct the pipline, where we aggregate, transform, and load data to the warehouse.
 
 - **Explotary Data Analysis**: We will explore features and visualize their relations in Tableau.
 
@@ -60,44 +33,60 @@ https://data.cdc.gov/Public-Health-Surveillance/United-States-COVID-19-County-Le
 
 - **Importance Analysis**: Finally, we conduct an importance analysis of our model to check which feature weighs more in the prediction.
 
+| Software & Libraries |   |
+| --- | --- |
+| Data Retrieval, Cleaning, and Analysis:  | Python, API |
+| Database Management/Storage:  | PostgreSQL |
+| Predictive Analysis:  | Machine Learning |
+| Data Visualization:  | Tableau |
+
 ***
 
-## The EDA of Vaccine Hesitancy, Supply Level, Community orders, and Health Conditions
+## Extract, Transform, and Load
 
-### The Map of Vaccine Hesitancy and community orders
-This is an overview of vaccine hesitancy and community orders on a county level. Blue colors stands for high vaccine hesitancy, while orange colors represents low vaccine hesitancy. Montana, Wyoming, Idaho, Mississippi, Oklahoma, Kentucky, and Georgia have high vacccine hesitancy rate.
-![the map of vaccine hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_map_of_hesitancy.png)
+### Extract
 
-### The Map of Vaccine Supply Level
-The colors suggest the average vaccine supply level for each state. Lousiana, Vermont, Wyoming, Iowa, Nebraska, Oregon, Indiana, and Wisconsin are among the least vaccine supply level. 
-![the map of vaccine hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_map_of_supply_level.png)
+We extract data directly from CDC website in csv file format.
 
-### The Community orders vs Hesitancy
-The graph illustrates how community orders (gathering bans, mask mandates, and stay-at-home orders) relates to the vaccine hesitancy rate. Obviously, counties without gathering ban have the highest hesitancy rate. This may explain how government's orders send messages to the public and raise people's awareness of public health.
-![The Community orders vs Hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_orders_vs_hesitancy.png)
+#### Data Source:
 
-### The Social vulnerability index (SVI) and transmission level vs Hesitancy
-Usually counties with high vulnerability shoud be most concerned by the government, as virus are more fatal to them. The graph reveals a positive correlation between social vulnerable index and hesitancy, and apparantly very highly vulnerable counties are the most hesitant to take vaccines. Also, we can see that counties are doubtful about vaccines suffer from more severe transimission. The government should focus on highly vulnerable counties.
-![The Social vulnerability index and transmission level vs Hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_svi_vs_hesitancy.png)
+Vaccine providers: https://data.cdc.gov/Vaccinations/Vaccines-gov-COVID-19-vaccinating-provider-locatio/5jp2-pgaw
 
-### The Mental health vs Hesitancy
-The less healthy mental situations suggest the less willingness to take vaccine. The graph highlights the positive relationship in mental health (no leisure time rate, depression rate, and long mental health issues rate) and the vaccine hesitancy rate.  
-![The mental health vs Hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_mental_vs_hesitancy.png)
+Vaccination: https://data.cdc.gov/Vaccinations/Fully-Vaccinated-Adults/jm79-dz78
 
-### The Concerns over vaccine roll out vs Public physical health conditions
-The physical disease rates are sliding as concerns for vaccine roll out difficulty decreases. This reflects that people with physical issues are more likely to take vaccine and worry about the vaccine avaliability,
-![The Concerns over vaccine roll out vs Public physical health conditions](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_concern_vs_physical_health.png)
+Vaccine Hesitancy: https://data.cdc.gov/Vaccinations/COVID-19-Vaccinations-in-the-United-States-County/8xkx-amqh
 
-### The Number of Providers vs Hesitancy 
-Though the linear relationship between supply level and hesitancy is not apparant in the graph. But we can identify that some highly hesitant counties (rate >= 0.2) get less vaccine supply (providers < 200), and counties with more supply (providers > 1200) show less hesitant over vaccine (rate  < 0.14).
-![The Number of Providers vs Hesitancy ](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_providers_vs_hesitancy.png)
+Mask Mandates: https://data.cdc.gov/Policy-Surveillance/U-S-State-and-Territorial-Public-Mask-Mandates-Fro/42jj-z7fa
 
-## Prepare data and Build Machine Models
+Stay-at-home orders: https://data.cdc.gov/Policy-Surveillance/U-S-State-and-Territorial-Stay-At-Home-Orders-Marc/y2iy-8irm
+
+Gathering bans: https://data.cdc.gov/Policy-Surveillance/U-S-State-and-Territorial-Gathering-Bans-March-11-/7xvh-y5vh
+
+Health conditions: https://chronicdata.cdc.gov/500-Cities-Places/PLACES-Census-Tract-Data-GIS-Friendly-Format-2021-/yjkw-uj5s
+
+Transmission level: https://data.cdc.gov/Public-Health-Surveillance/United-States-COVID-19-County-Level-of-Community-T/nra9-vzzn
+
+### Transform and Integration
+
+- Connected all tables based on a primary key County level fip code.
+- Cleaned data: setting data types, dropping redundancy, parsing and filtering all data to the same date range, aggregating features by county level, and correcting typos in SQL.
+- Integrated all tables into one by selecting useful features in SQL.
+
+### Load
+Save the transformed data in the database and send it via SQLAlchemy to Python ready for the model training.
+
+***
+
+## The overview of transformed data
+
+We covered 44 states, 2592 counties in the United States.
+
 ### Targets
-Our team created three regression models to predict U.S. counties' estimated hesitant, hesitant or unsure, and strongly hesistant rates respectively. So each model will run three times for three targets.
+There are three targets: U.S. counties' general hesitant, hesitant or unsure, and strongly hesistant rates. So our regression model will run three times for three targets.
 
 ### Features
 We have 27 features in those fields below:
+
 #### Vaccine Availability:
 
 the_number_of_providers per FIPS code
@@ -177,7 +166,40 @@ No ban, 0, 6, 8, 10, 50, 150, or 250
 fips_code is Federal Information Processing Standards (FIPS) Code; unique to each county
 metro_status for metro (metropolitan county) vs non-metro
 
-### Clean and prepare the data
+***
+
+## The EDA of Vaccine Hesitancy, Supply Level, Community orders, and Health Conditions
+
+### The Map of General Vaccine Hesitant Rate and Community Orders
+This is an overview of vaccine hesitancy and community orders on a county level. Blue colors stands for high vaccine hesitancy, while orange colors represents low vaccine hesitancy. Montana, Wyoming, Idaho, Mississippi, Oklahoma, Kentucky, and Georgia have high vacccine hesitancy rate.
+![the map of vaccine hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_map_of_hesitancy.png)
+
+### The Map of Vaccine Supply Level
+The colors suggest the average vaccine supply level for each state. Lousiana, Vermont, Wyoming, Iowa, Nebraska, Oregon, Indiana, and Wisconsin are among the least vaccine supply level. 
+![the map of vaccine hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_map_of_supply_level.png)
+
+### The Community orders vs General Hesitancy
+The graph illustrates how community orders (gathering bans, mask mandates, and stay-at-home orders) relates to the vaccine hesitancy rate. Obviously, counties without gathering ban have the highest hesitancy rate. This may explain how government's orders send messages to the public and raise people's awareness of public health.
+![The Community orders vs Hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_orders_vs_hesitancy.png)
+
+### The Social vulnerability index (SVI) and transmission level vs General Hesitancy
+Usually counties with high vulnerability shoud be most concerned by the government, as virus are more fatal to them. The graph reveals a positive correlation between social vulnerable index and hesitancy, and apparantly very highly vulnerable counties are the most hesitant to take vaccines. Also, we can see that counties are doubtful about vaccines suffer from more severe transimission. The government should focus on highly vulnerable counties.
+![The Social vulnerability index and transmission level vs Hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_svi_vs_hesitancy.png)
+
+### The Mental health vs General Hesitancy
+The less healthy mental situations suggest the less willingness to take vaccine. The graph highlights the positive relationship in mental health (no leisure time rate, depression rate, and long mental health issues rate) and the vaccine hesitancy rate.  
+![The mental health vs Hesitancy](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_mental_vs_hesitancy.png)
+
+### The Concerns over vaccine roll out vs Public physical health conditions
+The physical disease rates are sliding as concerns for vaccine roll out difficulty decreases. This reflects that people with physical issues are more likely to take vaccine and worry about the vaccine avaliability,
+![The Concerns over vaccine roll out vs Public physical health conditions](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_concern_vs_physical_health.png)
+
+### The Number of Providers vs General Hesitancy 
+Though the linear relationship between supply level and hesitancy is not apparant in the graph. But we can identify that some highly hesitant counties (rate >= 0.2) get less vaccine supply (providers < 200), and counties with more supply (providers > 1200) show less hesitant over vaccine (rate  < 0.14).
+![The Number of Providers vs Hesitancy ](https://github.com/ZiwenLyu/Vaccine_Hesitancy_Prediction/blob/main/screenshots/Tableau%20Screenshots/the_providers_vs_hesitancy.png)
+
+## Prepare data and Build Machine Models
+### Processing the data
 #### Handle the missing values
 As we can see from the screenshot, some columns contain nulls needed to be deal with:
 ![null values](https://github.com/jvvyas/Final-Project/blob/main/screenshots/null_values.png)
@@ -272,3 +294,15 @@ We can see that top correlated 4 features are:
 - Gathering bans
 - Average no-leisure-time rate 
 - Average checkup frequency 
+
+***
+
+## Conclusions & Further Research Recommendations 
+The Regression Tree model we built could predict the vaccine hesitant rate on a county level based on community health conditions, orders, SVI, and supply. It had the best overall predictive performance. It could offer suggestions for the government when campaigning and rolling out vaccines.
+**Insights**: The government's orders and health guidance sent important messages to the public and help the people raise awareness towards the virus. As we see places with or without gathering bans rated significantly differently on their hesitancy. 
+Also, the analysis highlights the social vulnerability index and health conditions as key points to consider when rolling out vaccine. Vulnerable people with fundmental diseases should be cared the most during the pandemic, but the analysis show they are the most reluctant to vaccination and suffering from high or substantial transmission. The government though priotized seniors and vulnerable ones for vaccination, the analysis suggests more campaigns, guidances, or instructions should be done.  
+
+For the further research, we will recommendate:
+- Wider the data scope to include more counties.
+- Sentimental analysis on social media posts, as it also plays a key role in vaccine hesitancy.
+- Scratch and collect news about vaccine and conduct keyword analysis.
