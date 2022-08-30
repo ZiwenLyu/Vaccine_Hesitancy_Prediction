@@ -1,6 +1,6 @@
 # Final-Project Topic: COVID 19 Vaccine Hesitancy Analysis
 
-[Link to Tableau Story](https://public.tableau.com/app/profile/ziwen.lyu/viz/TheEDAofVaccineHesitancySupplyLevelOrdersandHealthConditions/Story1?publish=yes)
+[Link to Tableau Story](https://public.tableau.com/app/profile/ziwen.lyu/viz/TheMapofVaccineHesitancySupplyLevelandOrders/Story2#1)
 
 ## Analysis Overview:
 The purpose of this project is to analyze and predict the level of Vaccine Hesitancy in USA in late 2021, a year after the outbreak of the COVID pandemic. The datasets which we will be using for statistical calculations and other technology libraries will help identify and display trends, and predict the outcomes accordingly.
