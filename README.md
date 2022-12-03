@@ -1,4 +1,4 @@
-# Final-Project Topic: COVID 19 Vaccine Hesitancy Analysis
+# COVID 19 Vaccine Hesitancy Analysis
 
 [Link to Tableau Story](https://public.tableau.com/app/profile/ziwen.lyu/viz/TheMapofVaccineHesitancySupplyLevelandOrders/Story2?publish=yes)
 
